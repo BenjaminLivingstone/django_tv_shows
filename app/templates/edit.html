@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-3"></div>
             <div class="col-6">
-                <form action="/shows/new/addshow/" method="POST">
+                <form action="/shows/{{show.id}}/editshow" method="POST">
                     {%csrf_token%}
                     <div class="row">
                         <label class="form-label">Title</label>
@@ -40,7 +40,7 @@
                     </div>
                     <!-- </div> -->
                     <div class="row text-center mt-3">
-                        <button type="submit" class="btn btn-lg btn-primary w-30">Create</button>
+                        <button type="submit" class="btn btn-lg btn-primary w-30">Update</button>
                         <p class="lead">
                         </p>
                     </div>

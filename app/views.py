@@ -42,12 +42,20 @@ def destroy(request,num):
     show.delete() 
     return redirect("/shows")
 
+def editshow(request,num):
+    print(request.POST)
+    show = Show.objects.get(id=num)
+    show.title = request.POST['show_title']
+    show.network = request.POST['show_network']
+    show.date=request.POST['rdate'] 
+    show.desc=request.POST['show_desc']
+    show.save()
+    return redirect(f"/shows/{show.id}")
 
 def edit(request,num):
     context={
         "show": Show.objects.get(id=num),
     }  
     return render (request, "edit.html", context)
-
 
 

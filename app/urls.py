@@ -9,5 +9,6 @@ urlpatterns = [
     path('shows/new/addshow/', views.addshow),
     path('shows/<int:num>/', views.detail),
     path('shows/<int:num>/edit', views.edit),
+    path('shows/<int:num>/editshow', views.editshow),
     path('shows/<int:num>/destroy', views.destroy),
 ]
