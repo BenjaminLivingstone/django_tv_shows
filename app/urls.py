@@ -8,6 +8,6 @@ urlpatterns = [
     path('shows/new/', views.newshowform),
     path('shows/new/addshow/', views.addshow),
     path('shows/<int:num>/', views.detail),
-    path('showss/<int:num>/edit', views.edit),
+    path('shows/<int:num>/edit', views.edit),
     path('shows/<int:num>/destroy', views.destroy),
 ]
